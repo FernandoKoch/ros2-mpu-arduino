@@ -1,0 +1,45 @@
+[0.393s] Invoking command in '/home/fernandocarlos/mpu6050_ws/src/mpu6050_pkg': PYTHONPATH=/home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/mpu6050_pkg build --build-base /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build install --record /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/install.log --single-version-externally-managed install_data
+[0.541s] running egg_info
+[0.541s] creating ../build/mpu6050_pkg/mpu6050_pkg.egg-info
+[0.541s] writing ../build/mpu6050_pkg/mpu6050_pkg.egg-info/PKG-INFO
+[0.541s] writing dependency_links to ../build/mpu6050_pkg/mpu6050_pkg.egg-info/dependency_links.txt
+[0.541s] writing entry points to ../build/mpu6050_pkg/mpu6050_pkg.egg-info/entry_points.txt
+[0.542s] writing requirements to ../build/mpu6050_pkg/mpu6050_pkg.egg-info/requires.txt
+[0.542s] writing top-level names to ../build/mpu6050_pkg/mpu6050_pkg.egg-info/top_level.txt
+[0.542s] writing manifest file '../build/mpu6050_pkg/mpu6050_pkg.egg-info/SOURCES.txt'
+[0.543s] reading manifest file '../build/mpu6050_pkg/mpu6050_pkg.egg-info/SOURCES.txt'
+[0.543s] writing manifest file '../build/mpu6050_pkg/mpu6050_pkg.egg-info/SOURCES.txt'
+[0.543s] running build
+[0.543s] running build_py
+[0.543s] creating /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build
+[0.543s] creating /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib
+[0.543s] creating /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib/mpu6050_pkg
+[0.543s] copying mpu6050_pkg/__init__.py -> /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib/mpu6050_pkg
+[0.543s] copying mpu6050_pkg/mpu_test1.py -> /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib/mpu6050_pkg
+[0.543s] copying mpu6050_pkg/mpu6050_filter_node.py -> /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib/mpu6050_pkg
+[0.543s] copying mpu6050_pkg/mpu6050_node.py -> /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib/mpu6050_pkg
+[0.544s] running install
+[0.545s] running install_lib
+[0.546s] creating /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg
+[0.546s] copying /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib/mpu6050_pkg/__init__.py -> /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg
+[0.546s] copying /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib/mpu6050_pkg/mpu_test1.py -> /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg
+[0.546s] copying /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib/mpu6050_pkg/mpu6050_filter_node.py -> /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg
+[0.546s] copying /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib/mpu6050_pkg/mpu6050_node.py -> /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg
+[0.547s] byte-compiling /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg/__init__.py to __init__.cpython-310.pyc
+[0.547s] byte-compiling /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg/mpu_test1.py to mpu_test1.cpython-310.pyc
+[0.548s] byte-compiling /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg/mpu6050_filter_node.py to mpu6050_filter_node.cpython-310.pyc
+[0.549s] byte-compiling /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg/mpu6050_node.py to mpu6050_node.cpython-310.pyc
+[0.550s] running install_data
+[0.550s] creating /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/share/ament_index
+[0.550s] creating /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/share/ament_index/resource_index
+[0.550s] creating /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/share/ament_index/resource_index/packages
+[0.550s] copying resource/mpu6050_pkg -> /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/share/ament_index/resource_index/packages
+[0.550s] copying package.xml -> /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/share/mpu6050_pkg
+[0.550s] running install_egg_info
+[0.551s] Copying ../build/mpu6050_pkg/mpu6050_pkg.egg-info to /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg-0.0.0-py3.10.egg-info
+[0.552s] running install_scripts
+[0.567s] Installing mpu6050_filter_node script to /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/mpu6050_pkg
+[0.568s] Installing mpu6050_node script to /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/mpu6050_pkg
+[0.568s] Installing mpu6050_serial_node script to /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/mpu6050_pkg
+[0.568s] writing list of installed files to '/home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/install.log'
+[0.585s] Invoked command in '/home/fernandocarlos/mpu6050_ws/src/mpu6050_pkg' returned '0': PYTHONPATH=/home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/mpu6050_pkg build --build-base /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build install --record /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/install.log --single-version-externally-managed install_data

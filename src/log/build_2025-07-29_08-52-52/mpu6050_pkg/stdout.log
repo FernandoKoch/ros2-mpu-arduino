@@ -1,0 +1,43 @@
+running egg_info
+creating ../build/mpu6050_pkg/mpu6050_pkg.egg-info
+writing ../build/mpu6050_pkg/mpu6050_pkg.egg-info/PKG-INFO
+writing dependency_links to ../build/mpu6050_pkg/mpu6050_pkg.egg-info/dependency_links.txt
+writing entry points to ../build/mpu6050_pkg/mpu6050_pkg.egg-info/entry_points.txt
+writing requirements to ../build/mpu6050_pkg/mpu6050_pkg.egg-info/requires.txt
+writing top-level names to ../build/mpu6050_pkg/mpu6050_pkg.egg-info/top_level.txt
+writing manifest file '../build/mpu6050_pkg/mpu6050_pkg.egg-info/SOURCES.txt'
+reading manifest file '../build/mpu6050_pkg/mpu6050_pkg.egg-info/SOURCES.txt'
+writing manifest file '../build/mpu6050_pkg/mpu6050_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build
+creating /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib
+creating /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib/mpu6050_pkg
+copying mpu6050_pkg/__init__.py -> /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib/mpu6050_pkg
+copying mpu6050_pkg/mpu_test1.py -> /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib/mpu6050_pkg
+copying mpu6050_pkg/mpu6050_filter_node.py -> /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib/mpu6050_pkg
+copying mpu6050_pkg/mpu6050_node.py -> /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib/mpu6050_pkg
+running install
+running install_lib
+creating /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg
+copying /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib/mpu6050_pkg/__init__.py -> /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg
+copying /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib/mpu6050_pkg/mpu_test1.py -> /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg
+copying /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib/mpu6050_pkg/mpu6050_filter_node.py -> /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg
+copying /home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/build/lib/mpu6050_pkg/mpu6050_node.py -> /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg
+byte-compiling /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg/mpu_test1.py to mpu_test1.cpython-310.pyc
+byte-compiling /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg/mpu6050_filter_node.py to mpu6050_filter_node.cpython-310.pyc
+byte-compiling /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg/mpu6050_node.py to mpu6050_node.cpython-310.pyc
+running install_data
+creating /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/share/ament_index
+creating /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/share/ament_index/resource_index
+creating /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/share/ament_index/resource_index/packages
+copying resource/mpu6050_pkg -> /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/share/ament_index/resource_index/packages
+copying package.xml -> /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/share/mpu6050_pkg
+running install_egg_info
+Copying ../build/mpu6050_pkg/mpu6050_pkg.egg-info to /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/python3.10/site-packages/mpu6050_pkg-0.0.0-py3.10.egg-info
+running install_scripts
+Installing mpu6050_filter_node script to /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/mpu6050_pkg
+Installing mpu6050_node script to /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/mpu6050_pkg
+Installing mpu6050_serial_node script to /home/fernandocarlos/mpu6050_ws/src/install/mpu6050_pkg/lib/mpu6050_pkg
+writing list of installed files to '/home/fernandocarlos/mpu6050_ws/src/build/mpu6050_pkg/install.log'
