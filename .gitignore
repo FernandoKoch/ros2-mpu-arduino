@@ -1,3 +1,35 @@
+# Arquivos gerados pelo colcon build
+build/
+install/
+log/
+
+# Arquivos de configuração do ROS
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Arquivos gerados pelo ament
+**/.rosinstall
+**/.catkin_workspace
+
+# Arquivos de IDE/editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de log personalizados (se houver)
+*.log
+
+# Arquivos de dependências (opcional)
+src/CMakeLists.txt
+
 devel/
 logs/
 build/
