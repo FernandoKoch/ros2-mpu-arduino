@@ -9,6 +9,7 @@
 
   <depend>rclpy</depend>
   <depend>sensor_msgs</depend>
+  <depend>gemoetry_msgs</depend>
   <depend>std_msgs</depend>
   <depend>serial</depend>
   <depend>time</depend>

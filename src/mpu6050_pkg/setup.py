@@ -23,7 +23,8 @@ setup(
             "mpu6050_node = mpu6050_pkg.mpu6050_node:main",
             "mpu6050_filter_node = mpu6050_pkg.mpu6050_filter_node:main",
             "mpu6050_serial_node = mpu6050_pkg.mpu6050_serial_node:main",
-            "imu_subscriber = mpu6050_pkg.imu_subscriber:main"
+            "imu_subscriber = mpu6050_pkg.imu_subscriber:main",
+            "imu_pose_node = mpu6050_pkg.imu_pose_node:main"
         ],
     },
 )
