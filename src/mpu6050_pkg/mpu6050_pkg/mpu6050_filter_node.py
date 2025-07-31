@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String, Int32, Float32, Float32MultiArray
+from std_msgs.msg import String, Float32MultiArray
 
 # Recebe mensagens de 'mpu6050_topic' e aplica filtros nos dados
 
@@ -55,9 +55,7 @@ class MPU6050FilterNode(Node):
             res4 = self.filter_gx(float_values[3])
             res5 = self.filter_gy(float_values[4])
             res6 = self.filter_gz(float_values[5])
-            # resAccel = self.filter_accel(float_values[0, 1, 2])
-            # resGyro = self.filter_gyro(float_values[3, 4, 5])
-            
+
             # publica o resultado
             self.publish_res(res1, res2, res3, res4, res5, res6)
 
@@ -67,6 +65,11 @@ class MPU6050FilterNode(Node):
         except Exception as e:
             self.get_logger().error(f"Erro inesperado: {str(e)}")
 
+    # Publica o resultado do filtro
+    def publish_res(self, res1, res2, res3, res4, res5, res6):
+        msg_res = Float32MultiArray()
+        msg_res.data = [res1, res2, res3, res4, res5, res6]
+        self.publisher_filter_ax.publish(msg_res)
 
     # Converte aceleracao linear para o SI    
     def filter_ax(self, value):
@@ -100,35 +103,6 @@ class MPU6050FilterNode(Node):
         self.get_logger().info(f"gz: {result:.2f}")
         return result
     
-    # Angulos de inclinacao
-    # def filter_roll(self, value):
-    #     ROLL = float(value) * (180.0 /)
-    #     self.get_logger().info(f"roll: {ROLL:.2f}")
-    #     return ROLL
-    
-    # Publica o resultado do filtro
-    def publish_res(self, res1, res2, res3, res4, res5, res6):
-        msg_res = Float32MultiArray()
-        msg_res.data = [res1, res2, res3, res4, res5, res6]
-        self.publisher_filter_ax.publish(msg_res)
-
-
-    # Metodos de teste 
-    # def filter_accel(self, value):
-    #     result = (float(value) / ACCEL_SCALE_MODIFIER_2G) * GRAVITIY
-    #     self.get_logger().info(f"ax: {result:.2f}, ay: {result:.2f}, az: {result:.2f}")
-    #     return result
-
-    # def filter_gyro(self, value):
-    #     result = float(value) / GYRO_SCALE_MODIFIER_250DEG
-    #     self.get_logger().info(f"gx: {result:.2f}, gy: {result:.2f}, gz: {result:.2f}")
-    #     return result
-
-    # def publish_res(self, resAccel, resGyro):
-    #     msg_res = Float32MultiArray()
-    #     msg_res.data = [resAccel, resGyro]
-    #     self.publisher_filter_ax.publish(msg_res)
-
 
 def main(args=None):
     rclpy.init(args=args)

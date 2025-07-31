@@ -3,6 +3,7 @@ import rclpy
 from rclpy.node import Node
 import serial
 from std_msgs.msg import String
+import time
 
 # Publica mensagens do tipo String no tópico 'mpu6050_topic'
 
@@ -17,6 +18,11 @@ class MPU6050Read(Node):
         # publisher, serial config, timer
         self.publisher_ = self.create_publisher(String, 'mpu6050_topic', 10)
         self.ser_ = serial.Serial(port, baudrate, timeout = 1)
+
+        time.sleep(2)
+        # for _ in range(5):
+        #     self.ser_.readline()
+
         self.timer_ = self.create_timer(0.1, self.serial_read)
         self.get_logger().info(
             f"mpu6050_node iniciado, publicando em mpu6050_topic")
