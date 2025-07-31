@@ -3,6 +3,8 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String, Int32, Float32, Float32MultiArray
 
+# Recebe mensagens de 'mpu6050_topic' e aplica filtros nos dados
+
 # Variaveis globais
 GRAVITIY = 9.80665
 

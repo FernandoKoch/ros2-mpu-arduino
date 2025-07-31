@@ -4,6 +4,7 @@ from rclpy.node import Node
 import serial
 from std_msgs.msg import String
 
+# Publica mensagens do tipo String no tópico 'mpu6050_topic'
 
 class MPU6050Read(Node):
     def __init__(self):
