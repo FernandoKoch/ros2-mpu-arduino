@@ -41,6 +41,9 @@ class MPU6050SerialNode(Node):
         self.timer = self.create_timer(0.02, self.read_and_publish)  
         self.get_logger().info(
             f"MPU6050 Serial Node iniciado, publicando em imu") 
+        
+        # self.madgwick = Madgwick()
+        # self.q = np.array([1.0, 0.0, 0.0, 0.0])
 
     def read_and_publish(self):
         line = self.serial_port.readline().decode().strip()  # Lê porta serial, converte bytes em string, remove espaços
@@ -55,10 +58,9 @@ class MPU6050SerialNode(Node):
 
             if len(values) != 6:
                 raise ValueError(f"Linha serial inválida: {line}") # Verifica se há exatamente 6 valores
-            ax, ay, az, gx, gy, gz = [float(x) for x in values] # Converte os valores lidos para float            
+            ax, ay, az, gx, gy, gz = [float(x) for x in values] # Converte os valores lidos para float   
 
             imu_msg = Imu()  # Cria uma nova mensagem do tipo Imu 
-
             imu_msg.linear_acceleration.x = (ax / ACCEL_2G) * GRAVITIY
             imu_msg.linear_acceleration.y = (ay / ACCEL_2G) * GRAVITIY
             imu_msg.linear_acceleration.z = (az / ACCEL_2G) * GRAVITIY 
@@ -66,7 +68,38 @@ class MPU6050SerialNode(Node):
             imu_msg.angular_velocity.y = gy / GYRO_250DEG
             imu_msg.angular_velocity.z = gz / GYRO_250DEG
             imu_msg.header.stamp = self.get_clock().now().to_msg()  # Timestamp da mensagem
-            imu_msg.header.frame_id = 'imu_link'                    # Frame de referência
+            imu_msg.header.frame_id = 'imu_link'                    # Frame de referência         
+
+            # Descomente as linhas abaixo para usar o filtro Madgwick 
+            
+            # acc = np.array([
+            #     (ax /ACCEL_2G) * GRAVITIY,
+            #     (ay /ACCEL_2G) * GRAVITIY,
+            #     (az /ACCEL_2G) * GRAVITIY
+            # ])
+
+            # gyr = np.array([
+            #     (gx / GYRO_250DEG) * np.pi / 180.0,
+            #     (gy / GYRO_250DEG) * np.pi / 180.0,
+            #     (gz / GYRO_250DEG) * np.pi / 180.0
+            # ])
+
+            # self.q = self.madgwick.updateIMU(self.q, gyr=gyr, acc=acc)
+
+            # imu_msg = Imu()
+            # imu_msg.linear_acceleration.x = acc[0]
+            # imu_msg.linear_acceleration.y = acc[1]
+            # imu_msg.linear_acceleration.z = acc[2]
+            # imu_msg.angular_velocity.x = gx / GYRO_250DEG
+            # imu_msg.angular_velocity.y = gy / GYRO_250DEG
+            # imu_msg.angular_velocity.z = gz / GYRO_250DEG
+            # imu_msg.header.stamp = self.get_clock().now().to_msg()
+            # imu_msg.header.frame_id = 'imu_link'
+
+            # imu_msg.orientation.x = self.q[0]
+            # imu_msg.orientation.x = self.q[1]
+            # imu_msg.orientation.y = self.q[2]
+            # imu_msg.orientation.z = self.q[3]            
 
             self.publisher_.publish(imu_msg) # Publica a mensagem IMU no tópico 'imu'            
 
