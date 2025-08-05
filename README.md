@@ -9,7 +9,8 @@ Desenvolvido para ROS2 Humble, em Ubuntu 22.04 e Arduino UNO.<br/>
 ## __2. Código para o Arduino__
 1. Cole o código encontrado na pasta ``mpu6050_arduino`` em seu Arduino IDE e faça upload para a placa<br/>
 
-2. Abra o monitor serial e espere a calibração do sensor. Os valores brutos aparecerão após alguns segundos<br/>
+2. Abra o monitor serial e espere a calibração do sensor. Mantenha o sensor virado para cima durante a calibração<br/>
+Os valores brutos aparecerão após alguns segundos<br/>
 
 3. Feche o monitor serial, a porta ``dev/ttyUSB0`` não deve estar em uso para rodar as aplicações ROS<br/>
 
