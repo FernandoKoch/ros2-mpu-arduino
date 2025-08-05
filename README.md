@@ -2,9 +2,9 @@
 
 
 ## __1. Overview__
-Repositório de testes com o sensor inercial MPU6050 em ROS2.<br/>
-Lendo os dados do sensor IMU a partir de um Arduino que envia esses dados via serial para um nó ROS.<br/>
-Desenvolvido para ROS2 Humble, em Ubuntu 22.04 e Arduino UNO.<br/>
+Repositório de testes com o sensor inercial MPU6050 em ROS2<br/>
+Lendo os dados do sensor IMU a partir de um Arduino que envia esses dados via serial para um nó ROS<br/>
+Desenvolvido para ROS2 Humble, em Ubuntu 22.04 e Arduino UNO<br/>
 
 ## __2. Código para o Arduino__
 1. Cole o código encontrado na pasta ``mpu6050_arduino`` em seu Arduino IDE e faça upload para a placa<br/>
